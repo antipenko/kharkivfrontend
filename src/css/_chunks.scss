@@ -1,0 +1,16 @@
+
+/*===== Variables =====*/
+
+$text: #000;
+
+
+/*===== Mixins =====*/
+@mixin clear() {
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+/*===== Keyframes =====*/

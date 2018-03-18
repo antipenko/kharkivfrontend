@@ -1,0 +1,45 @@
+.slick {
+  &-slider {
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+  }
+  &-list {
+    position: relative;
+    overflow: hidden;
+  }
+  &-track, &-list {
+    transform: translate3d(0, 0, 0);
+  }
+  &-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    @include clear();
+    .slick-loading & {
+      visibility: hidden;
+    }
+  }
+  &-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    .slick-loading & {
+      visibility: hidden;
+    }
+    .slick-vertical & {
+      display: block;
+      height: auto;
+    }
+  }
+  &-arrow.slick-hidden {
+    display: none;
+  }
+}
