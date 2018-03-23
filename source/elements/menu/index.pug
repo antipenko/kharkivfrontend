@@ -14,7 +14,7 @@ mixin menu(baseClass, menuData, preselectItem)
 header
 	.header_inner_wrap
 		.header_inner
-			a.scroll-link(href="#"+small_logo.href).logo
+			a(href=""+small_logo.href).logo
 				+insert-image(small_logo.src, 'logo', 'logo-img')
 			button.toggle-menu-button
 			nav.header_menu#header_menu

@@ -8,6 +8,7 @@ var gulp = require('gulp')
 
 gulp.task('templates', function () {
 	var pugJson = JSON.parse( fs.readFileSync(configs.source.pugJson, { encoding: 'utf8' }));
+	var pugJsonMeetup1 = JSON.parse( fs.readFileSync(configs.source.pugJsonMeetup, { encoding: 'utf8' }));
 
 	return gulp.src(configs.source.pug)
 	.pipe(plumber())

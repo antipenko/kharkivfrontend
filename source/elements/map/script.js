@@ -2,8 +2,8 @@
 (function() {
     var map
     	, pos = {
-    		lat: 49.9866541
-    		, lng: 36.2532964
+    		lat: 49.98925,
+            lng: 36.222881
     	}
 
     function initMap() {
@@ -112,7 +112,7 @@
                     "featureType": "road",
                     "elementType": "labels",
                     "stylers": [{
-                        "visibility": "off"
+                        //"visibility": "off"
                     }]
                 },
                 {
@@ -185,7 +185,7 @@
         position: new google.maps.LatLng(pos.lat, pos.lng),
         icon: {
         	url: "/img/map-mark.svg",
-        	scaledSize: new google.maps.Size(80, 110), // scaled size
+        	//scaledSize: new google.maps.Size(80, 110), // scaled size
     	    origin: new google.maps.Point(0,0),
     	    anchor: new google.maps.Point(0, 0)
         },

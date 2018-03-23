@@ -1,0 +1,97 @@
+extends ./layout/default_layout
+
+block title_name
+    title=title
+
+
+block main_content
+    include ../elements/preloader/index
+
+    include ../elements/menu/menu-meetup
+
+    section#intro.intro.intro-item.scroll-spy
+        img.intro-logo.intro-logo-item.wow.fadeInUp(alt='Kharkiv front-eng logo', src='img/logo.png')
+        h1.wow.fadeInUp.intro-event_name.intro-event-item_name(data-wow-delay='.2s') #_2
+        .intro-info.intro-info_big.wow.fadeInUp
+            p 17 февраля 2018 года прошел первый KharkivFrontend Meetup.
+            p В этот раз мы говорили о том, что же такое контекст наложения, о безопасности веб-приложений и основных уязвимостях.
+            p Научились писать тесты и убедились, что они вовсе не страшные, узнали, как добавлять свои элементы визуализации.
+            p На этот раз помимо класных докладов и живой беседы были разнообразные призы, яркие фото, вкусный кофе и чай, и печеньки.
+    section#speakers.speakers.scroll-spy
+        h1.section_header.wow.fadeInUp speakers
+        .speakers-list.speakers-list-item
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/speaker1.jpg')")
+                    h2.speakers-person-name Влад Антипенко
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec Контекст наложения - кто ты?
+                    p.speakers-talk-item-info
+                        | Поговорим о контексте наложения, а именно: - что это такое; - как он может нам насолить; - что на него влияет; - как переманить его на свою сторону.
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=MiCzHtgQIqs&list=PLDddScyTGZAvMNlREfTpW2MYnmC2aj1uf" target="_blank") Ссылка на видео
+
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/speaker4.jpg');")
+                    h2.speakers-person-name Лиманская Дарья
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec Grafana и Frontend, что делать если мы хотим добавлять свои элементы визуализации?
+                    p.speakers-talk-item-info
+                        | Визуальный мониторинг серверной инфраструктуры с помощью Grafana, разработка кастомных элементов для собственной системы мониторинга на примере Percona Monitoring andManagement System
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=ZyUHzLylcGA&index=3&list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP" target="_blank") Ссылка на видео
+
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/speaker3.jpg')")
+                    h2.speakers-person-name Максим Нечесонов
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec It's a test!
+                    p.speakers-talk-item-info
+                        | Доклад о личном опыте написания тестов и
+                        | видением, какими они должны быть. Рассмотрели
+                        | - мотивацию для написания тестов
+                        | - виды тестирования и их краткое описание
+                        | - какие инструменты используются
+                        | - как подготавливать данные
+                        | - примеры на Angular и VueJS
+                        | - как начать писать, если некому подсказать
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=ArItIDpVL58&index=4&list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP" target="_blank") Ссылка на видео
+
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/speaker2.jpg')")
+                    h2.speakers-person-name Елена Шаровар
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec Безопасность веб-приложений
+                    p.speakers-talk-item-info
+                        | Обзор основных уязвимостей, о которых должны знать веб-разработчики для того чтобы их предусмотреть и предотвратить
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=0BwpXOTj_P0&list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP&index=5" target="_blank") Ссылка на видео
+
+
+    section#photo.meetup-photos.scroll-spy
+        h1.section_header.wow.fadeInUp Photos
+        .photo-list
+            .photo.photo-60
+                img(src="/img/meetup-2/1.jpg")
+            .photo.photo-40
+                img(src="/img/meetup-2/4.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/6.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/2.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/3.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/5.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/7.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/8.jpg")
+        a.button.button_center(href="https://www.facebook.com/508883692837624/photos/?tab=album&album_id=560533167672676" target="_blank") Больше фото
+    include ../elements/archive/index
+    include ../elements/map/index
+    //- include ../elements/ticket/index

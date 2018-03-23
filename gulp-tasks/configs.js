@@ -1,7 +1,7 @@
 'use strict';
 
 var soursePath = './source/'
-	, buildPath = './build/'
+	, buildPath = 'build/'
 	, dirs = {
 		'source': {
 			'vendorJs': soursePath + 'js/vendor/'
@@ -12,6 +12,7 @@ var soursePath = './source/'
 			, 'pug': soursePath + 'pages/*.pug'
 			, 'pugLayout': soursePath + 'pages/layout/'
 			, 'pugJson': soursePath + 'pages/jsons/index.json'
+			, 'pugJsonMeetup': soursePath + 'pages/jsons/meetup-1.json'
 			, 'pug_watch': [soursePath + 'pages/**/*.pug', soursePath + 'pages/**/*.json', soursePath + 'elements/**/*.pug', soursePath + 'elements/**/*.json']
 			, 'sass': [soursePath + 'sass/**/*.*', soursePath + 'elements/**/*.sass']
 			, 'sassFolder': soursePath + 'sass/'
@@ -29,7 +30,7 @@ var soursePath = './source/'
 			, 'js': buildPath + '/js/'
 			, 'fonts': buildPath + '/fonts/'
 			, 'build': buildPath
-			, 'img': buildPath + '/img/'
+			, 'img': buildPath + 'img/'
 			, 'favicon': buildPath
 		}
 	}

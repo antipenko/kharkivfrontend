@@ -6,6 +6,9 @@
 			flex-wrap: wrap
 			justify-content: space-around
 			flex-direction: row
+		&-item
+			+min-screen($mobile - 1)
+			flex-direction: column
 	&-person
 		// flex: 1 0 0
 		margin-bottom: 50px
@@ -18,6 +21,23 @@
 			margin-bottom: 100px
 			flex: 1 0 26%
 			max-width: 26%
+		&-item
+			width: 100%
+			max-width: 100%
+			flex-direction: column
+			display: flex
+			margin-bottom: 30px
+			+min-screen($tablet - 1)
+				flex-direction: row
+				width: 75%
+				max-width: 100%
+				margin: 0 auto 40px
+		&-talk
+		&-wrap
+			+min-screen($tablet - 1)
+				margin-right: 25px
+			.speakers-person-image-wrap
+				margin-bottom: 10px
 		&-image
 			display: inline-block
 			background-repeat: no-repeat
@@ -64,6 +84,14 @@
 			color: $primary-blue
 			+min-screen($tablet - 1)
 				margin-bottom: 25px
+				height: 4.2em
+				overflow: hidden
+				cursor: pointer
+				transition: height 1s ease
+				&:hover
+					min-height: 4.2em
+					height: auto
+					overflow: auto
 	&-talk
 		&-name
 			color: $primary-red
@@ -86,9 +114,55 @@
 				color: $primary-light-red
 				+min-screen($mobile - 1)
 					font-size: 111px
+			&_without-dec
+				&:before
+					content: none
 		&-info
 			font-size: 20px
 			&:before
 				content: "{"
 			&:after
 				content: "}"
+		&-link
+			font-size: 1.3em
+			color: $primary-blue
+	&-talk-item
+		&-info
+			margin-bottom: .5em
+//photo
+.photo
+	flex-grow: 1
+	padding: 0 10px
+	margin-bottom: 20px
+	max-height: 650px
+	&-list
+		display: flex
+		flex-wrap: wrap
+		width: 80%
+		margin: 0 auto 20px
+	+min-screen($tablet - 1)
+		max-height: 450px
+		&-25
+			width: 25%
+		&-30
+			width: 30%
+		&-40
+			width: 40%
+		&-50
+			width: 50%
+		&-60
+			width: 60%
+		&-75
+			width: 75%
+		&-100
+			width: 100%
+	+min-screen(1600px)
+		max-height: 650px
+	img
+		object-fit: cover
+		object-position: left
+		width: 100%
+		height: 300px
+		+min-screen($tablet - 1)
+		height: 100%
+
