@@ -18,8 +18,11 @@
 		max-width: 70%
 		height: auto
 		+min-screen($mobile + 1)
-			margin: 100px auto 20px
-			max-width: 30%;
+			margin: 60px auto 20px
+			max-width: 27%
+			&__small
+				max-width: 20%
+				margin: 0 auto
 		&-item
 			+min-screen($tablet + 1)
 				margin: 150px auto 20px
@@ -29,7 +32,7 @@
 		color: $black
 		margin-top: 20px
 		+min-screen($mobile + 1)
-			font-size: 44px
+			font-size: 35px
 	&-event-item_name
 		margin: 0
 	&-info
@@ -79,4 +82,11 @@
 			+min-screen($mobile + 1)
 				margin-right: 10px
 				width: 50px
+.form-registrate
+	width: 100%
+	min-height: 100vh
 
+.intro-desc
+	max-width: 65%
+	font-size: 1.3em
+	margin-top: .5em

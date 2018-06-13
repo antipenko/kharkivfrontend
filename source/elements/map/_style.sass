@@ -32,3 +32,36 @@
 	#map
 		&:before
 			content: none
+
+.footer
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 90px
+.social-link
+	height: 30px
+	width: 30px
+	margin: 0 5px
+	background-color: $primary-blue
+	background-size: 70%
+	background-repeat: no-repeat
+	background-position: center
+	transition: opacity .3s
+	&:hover
+		opacity: .8
+.fb
+	background-image: url(/img/facebook-logo.svg)
+.instagram
+	background-image: url(/img/instagram-logo.svg)
+.email
+	background-image: url(/img/email.svg)
+
+.visually-hidden
+	position: absolute !important
+	clip: rect(1px 1px 1px 1px)
+	clip: rect(1px, 1px, 1px, 1px)
+	padding:0 !important
+	border:0 !important
+	height: 1px !important
+	width: 1px !important
+	overflow: hidden
