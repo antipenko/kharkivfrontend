@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Frontend Meetup</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- bower:css-->
+    <link rel="stylesheet" href="css/vendor/animate.css">
+    <!-- endbower-->
+    <link rel="stylesheet" href="css/screen.css">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Frontend Meetup">
+    <meta property="og:description" content="Kharkiv Frontend Meetup">
+    <meta property="og:site_name" content="Frontend Meetup">
+    <meta property="og:image" content="http://http://kharkivfrontend.org/img/ava.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Frontend Meetup">
+    <meta name="twitter:title" content="Frontend Meetup">
+    <meta name="twitter:description" content="Kharkiv Frontend Meetup">
+    <meta name="twitter:creator" content="Kharkiv Frontend Meetup">
+    <meta name="twitter:image" content="http://http://kharkivfrontend.org/img/ava.jpg"><link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="frontend meetup">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#fff">
+<meta name="application-name" content="frontend meetup">
+<link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-320x460.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-750x1294.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1182x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1242x2148.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-748x1024.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-768x1004.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1496x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
+  </head>
+  <body>
+    <!--.preloader
+    // - for (var item = 1; item <= 5; item++)
+    // 	.preloader_item
+    // 		- for (var dot = 1; dot <= 16; dot++)
+    // 			.preloader_item-dot
+    -->
+    <header>
+      <div class="header_inner_wrap">
+        <div class="header_inner"><a class="logo" href="/"><img class="logo-img" alt="logo" src="img/logo-small.png"/></a>
+          <button class="toggle-menu-button"></button>
+          <nav class="header_menu" id="header_menu">
+                <ul class="header_menu-list">
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#speakers">Кто будет</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#agenda">Что обсудим</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#partners">Кто помогает</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#map">Где</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#archive">Как было</a></li>
+                  <li class="header_menu-list_item"><a class="menu-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdzjph4Ld8Q9oEzec6xWDZ9smbDFr0zMgPd8lUfEvAdRNoh-w/viewform?usp=sf_link" target="_blank">Регистрация</a></li>
+                </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="intro intro-item scroll-spy" id="intro"><img class="intro-logo intro-logo-item wow fadeInUp" alt="Kharkiv front-eng logo" src="img/logo.png">
+      <h1 class="wow fadeInUp intro-event_name intro-event-item_name" data-wow-delay=".2s">#_2</h1>
+      <div class="intro-info intro-info_big wow fadeInUp">
+        <p>17 февраля 2018 года прошел первый KharkivFrontend Meetup.</p>
+        <p>В этот раз мы говорили о том, что же такое контекст наложения, о безопасности веб-приложений и основных уязвимостях.</p>
+        <p>Научились писать тесты и убедились, что они вовсе не страшные, узнали, как добавлять свои элементы визуализации.</p>
+        <p>На этот раз помимо класных докладов и живой беседы были разнообразные призы, яркие фото, вкусный кофе и чай, и печеньки.</p>
+      </div>
+    </section>
+    <section class="speakers scroll-spy" id="speakers">
+      <h1 class="section_header wow fadeInUp">speakers</h1>
+      <div class="speakers-list speakers-list-item">
+        <div class="speakers-person speakers-person-item wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-wrap">
+            <div class="speakers-person-image-wrap">
+              <div class="speakers-person-image" style="background-image: url('/img/speaker1.jpg');"></div>
+            </div>
+            <h2 class="speakers-person-name">Влад Антипенко</h2>
+          </div>
+          <div class="speakers-person-talk">
+            <h2 class="speakers-talk-name speakers-talk-name_without-dec">Контекст наложения - кто ты?</h2>
+            <p class="speakers-talk-item-info">Поговорим о контексте наложения, а именно: - что это такое; - как он может нам насолить; - что на него влияет; - как переманить его на свою сторону.</p><a class="speakers-talk-link" href="https://www.youtube.com/watch?v=MiCzHtgQIqs&amp;list=PLDddScyTGZAvMNlREfTpW2MYnmC2aj1uf" target="_blank">Ссылка на видео</a>
+          </div>
+        </div>
+        <div class="speakers-person speakers-person-item wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-wrap">
+            <div class="speakers-person-image-wrap">
+              <div class="speakers-person-image" style="background-image: url('/img/speaker4.jpg');"></div>
+            </div>
+            <h2 class="speakers-person-name">Лиманская Дарья</h2>
+          </div>
+          <div class="speakers-person-talk">
+            <h2 class="speakers-talk-name speakers-talk-name_without-dec">Grafana и Frontend, что делать если мы хотим добавлять свои элементы визуализации?</h2>
+            <p class="speakers-talk-item-info">Визуальный мониторинг серверной инфраструктуры с помощью Grafana, разработка кастомных элементов для собственной системы мониторинга на примере Percona Monitoring andManagement System</p><a class="speakers-talk-link" href="https://www.youtube.com/watch?v=ZyUHzLylcGA&amp;index=3&amp;list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP" target="_blank">Ссылка на видео</a>
+          </div>
+        </div>
+        <div class="speakers-person speakers-person-item wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-wrap">
+            <div class="speakers-person-image-wrap">
+              <div class="speakers-person-image" style="background-image: url('/img/speaker3.jpg');"></div>
+            </div>
+            <h2 class="speakers-person-name">Максим Нечесонов</h2>
+          </div>
+          <div class="speakers-person-talk">
+            <h2 class="speakers-talk-name speakers-talk-name_without-dec">It's a test!</h2>
+            <p class="speakers-talk-item-info">
+              Доклад о личном опыте написания тестов и
+              видением, какими они должны быть. Рассмотрели
+              - мотивацию для написания тестов
+              - виды тестирования и их краткое описание
+              - какие инструменты используются
+              - как подготавливать данные
+              - примеры на Angular и VueJS
+              - как начать писать, если некому подсказать
+            </p><a class="speakers-talk-link" href="https://www.youtube.com/watch?v=ArItIDpVL58&amp;index=4&amp;list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP" target="_blank">Ссылка на видео</a>
+          </div>
+        </div>
+        <div class="speakers-person speakers-person-item wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-wrap">
+            <div class="speakers-person-image-wrap">
+              <div class="speakers-person-image" style="background-image: url('/img/speaker2.jpg');"></div>
+            </div>
+            <h2 class="speakers-person-name">Елена Шаровар</h2>
+          </div>
+          <div class="speakers-person-talk">
+            <h2 class="speakers-talk-name speakers-talk-name_without-dec">Безопасность веб-приложений</h2>
+            <p class="speakers-talk-item-info">Обзор основных уязвимостей, о которых должны знать веб-разработчики для того чтобы их предусмотреть и предотвратить</p><a class="speakers-talk-link" href="https://www.youtube.com/watch?v=0BwpXOTj_P0&amp;list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP&amp;index=5" target="_blank">Ссылка на видео</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="meetup-photos scroll-spy" id="photo">
+      <h1 class="section_header wow fadeInUp">Photos</h1>
+      <div class="photo-list">
+        <div class="photo photo-60"><img src="/img/meetup-2/1.jpg"></div>
+        <div class="photo photo-40"><img src="/img/meetup-2/4.jpg"></div>
+        <div class="photo photo-30"><img src="/img/meetup-2/6.jpg"></div>
+        <div class="photo photo-30"><img src="/img/meetup-2/2.jpg"></div>
+        <div class="photo photo-30"><img src="/img/meetup-2/3.jpg"></div>
+        <div class="photo photo-30"><img src="/img/meetup-2/5.jpg"></div>
+        <div class="photo photo-30"><img src="/img/meetup-2/7.jpg"></div>
+        <div class="photo photo-30"><img src="/img/meetup-2/8.jpg"></div>
+      </div><a class="button button_center" href="https://www.facebook.com/508883692837624/photos/?tab=album&amp;album_id=560533167672676" target="_blank">Больше фото</a>
+    </section>
+    <section class="archive scroll-spy" id="archive">
+      <h1 class="section_header wow fadeInUp">архив</h1>
+      <div class="archive-list">
+        <div class="archive-item">
+          <div class="archive-item__img"><a href="meetup-1.html"><img src="/img/meetup-0/afisha.jpg"></a></div>
+          <h2 class="archive-item__title"><a class="archive-item__link" href="meetup-1.html">KharkivFrontend Meetup #0</a></h2>
+        </div>
+        <div class="archive-item">
+          <div class="archive-item__img"><a href="meetup-2.html"><img src="/img/meetup-2/afisha.png"></a></div>
+          <h2 class="archive-item__title"><a class="archive-item__link" href="meetup-2.html">KharkivFrontend Meetup #2</a></h2>
+        </div>
+      </div>
+    </section>
+    <section class="map scroll-spy" id="map">
+      <h1 class="section_header wow fadeInUp">расположение</h1>
+      <div class="wow fadeInUp" id="map-container"></div>
+    </section>
+    <!-- bower:js-->
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/wow.js"></script>
+    <!-- endbower-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvo_hmAD5Pjm9yJmG6_vQwUTD03Zfhlqk"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Frontend Meetup</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- bower:css-->
+    <link rel="stylesheet" href="css/vendor/animate.css">
+    <!-- endbower-->
+    <link rel="stylesheet" href="css/screen.css">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Frontend Meetup">
+    <meta property="og:description" content="Kharkiv Frontend Meetup">
+    <meta property="og:site_name" content="Frontend Meetup">
+    <meta property="og:image" content="http://http://kharkivfrontend.org/img/ava.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Frontend Meetup">
+    <meta name="twitter:title" content="Frontend Meetup">
+    <meta name="twitter:description" content="Kharkiv Frontend Meetup">
+    <meta name="twitter:creator" content="Kharkiv Frontend Meetup">
+    <meta name="twitter:image" content="http://http://kharkivfrontend.org/img/ava.jpg"><link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="frontend meetup">
+<link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#fff">
+<meta name="application-name" content="frontend meetup">
+<link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-320x460.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-750x1294.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1182x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1242x2148.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-748x1024.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-768x1004.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1496x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
+  </head>
+  <body>
+    <!--.preloader
+    // - for (var item = 1; item <= 5; item++)
+    // 	.preloader_item
+    // 		- for (var dot = 1; dot <= 16; dot++)
+    // 			.preloader_item-dot
+    -->
+    <header>
+      <div class="header_inner_wrap">
+        <div class="header_inner"><a class="logo" href="/"><img class="logo-img" alt="logo" src="img/logo-small.png"/></a>
+          <button class="toggle-menu-button"></button>
+          <nav class="header_menu" id="header_menu">
+                <ul class="header_menu-list">
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#speakers">Кто будет</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#agenda">Что обсудим</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#partners">Кто помогает</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#map">Где</a></li>
+                  <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#archive">Как было</a></li>
+                  <li class="header_menu-list_item"><a class="menu-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdzjph4Ld8Q9oEzec6xWDZ9smbDFr0zMgPd8lUfEvAdRNoh-w/viewform?usp=sf_link" target="_blank">Регистрация</a></li>
+                </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="intro scroll-spy" id="intro"><img class="intro-logo intro-logo__small wow fadeInUp" alt="Kharkiv front-eng logo" src="img/logo.png"/>
+      <h1 class="wow fadeInUp intro-event_name" data-wow-delay=".2s">KharkivFrontend Summer Conference</h1>
+      <p class="intro-desc">В июле мы проводим конференцию посвещенную Node.js. Программа состоит из 6 докладов. Встречаемся в Фабрике. Цена билета 200 гривен.</p>
+      <p class="intro-desc">Подробная информация ниже.</p>
+      <div class="intro-info wow fadeInUp">
+        <p class="intro-time" data-wow-delay=".3s"><img class="intro-time-icon" alt="time" src="img/clock-ico.png"/><span>22.07.18<br>11:00</span>
+        </p><a class="scroll-link intro-location" href="#map" data-wow-delay=".3s"><img class="intro-location-icon" alt="location" src="img/map-mark.svg"/>
+          <address class="intro-location-data">Fabrika,<br>Благовещенская 1</address></a>
+      </div>
+    </section>
+    <section class="speakers scroll-spy" id="speakers">
+      <h1 class="section_header wow fadeInUp">докладчики</h1>
+      <div class="speakers-list">
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-image-wrap">
+            <div class="speakers-person-image" style="background-image: url('/img/korabelski.jpg');"></div>
+          </div>
+          <h2 class="speakers-person-name">Максим Корабельский</h2>
+          <p class="speakers-person-info">🤓‍💻JS разработчик с амбициями программиста.. 3 года во фронтенде. Не признает Vue🧐. Любит холивары</p>
+          <h2 class="speakers-talk-name">NodeJS. What is the secret?</h2>
+          <p class="speakers-talk-info">Как работает нода, в чем ее секрет? Основные отличия от PHP и других языков, используемых для разработки бекенда</p>
+        </div>
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-image-wrap">
+            <div class="speakers-person-image" style="background-image: url('/img/momot.jpg');"></div>
+          </div>
+          <h2 class="speakers-person-name">Олег Момот</h2>
+          <p class="speakers-person-info">Занимаюсь разработкой приложений на языке JavaScript.</p>
+          <h2 class="speakers-talk-name">Короткое замыкание в JavaScript</h2>
+          <p class="speakers-talk-info">Замыкания в теории и на практике.</p>
+        </div>
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-image-wrap">
+            <div class="speakers-person-image" style="background-image: url('/img/kalinina.png');"></div>
+          </div>
+          <h2 class="speakers-person-name">Калинина Александра</h2>
+          <p class="speakers-person-info">Просто человек</p>
+          <h2 class="speakers-talk-name">Может пора отказаться от тестов?</h2>
+          <p class="speakers-talk-info">Когда наступает время писать тесты? рефакторить? А может пора от них отказаться?</p>
+        </div>
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-image-wrap">
+            <div class="speakers-person-image" style="background-image: url('/img/torosyan.jpg');"></div>
+          </div>
+          <h2 class="speakers-person-name">Торосян Артур</h2>
+          <p class="speakers-person-info">Node.js разработчик</p>
+          <h2 class="speakers-talk-name">Event loop. Что это и с чем его едят</h2>
+          <p class="speakers-talk-info">Что такое Event loop, почему на нём так много завязано, зачем он вообще нужен.</p>
+        </div>
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-image-wrap">
+            <div class="speakers-person-image" style="background-image: url('/img/moiseev.jpg');"></div>
+          </div>
+          <h2 class="speakers-person-name">Моисеев Дмитрий </h2>
+          <p class="speakers-person-info">Занимаюсь javascript разработкой</p>
+          <h2 class="speakers-talk-name">Node.js http module</h2>
+          <p class="speakers-talk-info">Как писать http сервисы на pure node.js</p>
+        </div>
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+          <div class="speakers-person-image-wrap">
+            <div class="speakers-person-image" style="background-image: url('/img/kiktev.jpg');"></div>
+          </div>
+          <h2 class="speakers-person-name">Киктёв Виталий</h2>
+          <p class="speakers-person-info">Люблю путешествовать, делать фотографии. Интересуюсь новыми технологиями, наукой, философией, религией. Приветствую прогресс</p>
+          <h2 class="speakers-talk-name">Потоки данных в node.js</h2>
+          <p class="speakers-talk-info">В докладе пойдёт речь о том что такое поток данных, какие виды потоков бывают. Также рассмотрим основные характеристики и способы применения этой абстракции в контексте разработки веб приложения на основе node.js</p>
+        </div>
+      </div>
+    </section>
+    <section class="agenda scroll-spy" id="agenda">
+      <h1 class="section_header wow fadeInUp">расписание</h1>
+      <p class="text-center">Расписание ещё формируется. Уже скоро появится.</p>
+      <!--table.agenda-table.wow.fadeInUp-->
+      <!--	thead.agenda-table-head-->
+      <!--		tr-->
+      <!--			th Время-->
+      <!--			th Докладчик-->
+      <!--			th Название доклада-->
+      <!--	tbody.agenda-table-body-->
+      <!--		each speaker in speakers-->
+      <!--			tr-->
+      <!--				td.agenda-table-time=speaker.talk.time-->
+      <!--				td.agenda-table-speaker=speaker.person.name-->
+      <!--				td.agenda-table-talk=speaker.talk.name-->
+    </section>
+    <section class="agenda scroll-spy" id="tickets">
+      <h1 class="section_header">Билеты</h1>
+      <table class="agenda-table wow fadeInUp">
+        <thead class="agenda-table-head">
+          <tr>
+            <th>Тип Билета</th>
+            <th>Завершение продажи</th>
+            <th>Цена</th>
+          </tr>
+        </thead>
+        <tbody class="agenda-table-body">
+          <tr>
+            <td>Ранние пташки</td>
+            <td>25.06.2018</td>
+            <td>200 грн</td>
+          </tr>
+          <tr>
+            <td>Стандарт</td>
+            <td>20.07.2018</td>
+            <td>300 грн</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ticket-wrapper"><a class="menu-button ticket-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdzjph4Ld8Q9oEzec6xWDZ9smbDFr0zMgPd8lUfEvAdRNoh-w/viewform?usp=sf_link" target="_blank">Купить билет</a></div>
+      <div class="payment-info text-center">
+        <p>ОБРАТИТЕ ВНИМАНИЕ, что для покупки билета, важно заполнить <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzjph4Ld8Q9oEzec6xWDZ9smbDFr0zMgPd8lUfEvAdRNoh-w/viewform">форму</a> и произвести оплату.</p>
+        <p>Если вы заполнили форму, но не произвели оплату, то воспользуьтесь кнопкой ниже :)</p>
+        <p><a class="menu-button ticket-button" href="https://www.liqpay.ua/ru/checkout/card/1528901770270771_43003750_82CoXhki2wi7YLSvXEwz" target="_blank">Оплата</a></p>
+      </div>
+    </section>
+    <!--include ../elements/partners/index-->
+    <section class="archive scroll-spy" id="archive">
+      <h1 class="section_header wow fadeInUp">архив</h1>
+      <div class="archive-list">
+        <div class="archive-item">
+          <div class="archive-item__img"><a href="meetup-1.html"><img src="/img/meetup-0/afisha.jpg"></a></div>
+          <h2 class="archive-item__title"><a class="archive-item__link" href="meetup-1.html">KharkivFrontend Meetup #0</a></h2>
+        </div>
+        <div class="archive-item">
+          <div class="archive-item__img"><a href="meetup-2.html"><img src="/img/meetup-2/afisha.png"></a></div>
+          <h2 class="archive-item__title"><a class="archive-item__link" href="meetup-2.html">KharkivFrontend Meetup #2</a></h2>
+        </div>
+      </div>
+    </section>
+    <section class="speakers scroll-spy" id="speakers">
+      <h1 class="section_header wow fadeInUp">Наши друзья</h1>
+      <div class="friends-list">
+        <div class="friends-community wow fadeInUp" data-wow-duration="1s">
+          <div class="friends-image-wrap"><a class="friends-image" href="https://ngtalks.io/" target="_blanc" style="background-image: url('https://uploads-ssl.webflow.com/5846efd7f1ff15e45b312d19/58a5dcffbf8b84e11bb12818_ng-talks-logo.png');"></a></div>
+          <div class="friend-info">
+            <h2 class="speakers-person-name friend-name">Конференция NgTalks 2018</h2>
+            <p class="speakers-person-info friend-desc">Пройдет 8-11 августа в Fabrika.space, г. Харьков. NgTalks  — первая в Украине конференция, посвященная Angular технологиям и охватывающая передовые методы, подходы и самые современные тенденции сообщества. Мероприятие продлится 4 дня, из которых 2 полноценных дня, 8-9 августа, будут состоять из Workshop-ов, а 10-11 августа пройдет конференция.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map scroll-spy" id="map">
+      <h1 class="section_header wow fadeInUp">расположение</h1>
+      <div class="wow fadeInUp" id="map-container"></div>
+    </section>
+    <footer class="footer">
+      <h1 class="section_header wow fadeInUp">Контактная информация</h1>
+      <a class="social-link email" href="mailto:kharkivfrontend@gmail.com"><span class="visually-hidden">наш email</span></a><a class="social-link fb" href="https://www.facebook.com/KharkivFrontend/"><span class="visually-hidden">наша страничка на facebook</span></a><a class="social-link instagram" href="https://www.instagram.com/kharkivfrontend/"><span class="visually-hidden">наша страничка в instagram</span></a></footer>
+    <!-- bower:js-->
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/wow.js"></script>
+    <!-- endbower-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvo_hmAD5Pjm9yJmG6_vQwUTD03Zfhlqk"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
