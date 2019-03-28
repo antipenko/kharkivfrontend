@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kharkiv Frontend Community</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- bower:css-->
+    <link rel="stylesheet" href="css/vendor/animate.css">
+    <!-- endbower-->
+    <link rel="stylesheet" href="css/screen.css">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kharkiv Frontend Community">
+    <meta property="og:description" content="Kharkiv Frontend Community">
+    <meta property="og:site_name" content="Kharkiv Frontend Community">
+    <meta property="og:image" content="http://http://kharkivfrontend.org/img/ava.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Kharkiv Frontend Community">
+    <meta name="twitter:title" content="Kharkiv Frontend Community">
+    <meta name="twitter:description" content="Kharkiv Frontend Community">
+    <meta name="twitter:creator" content="Kharkiv Frontend Meetup">
+    <meta name="twitter:image" content="http://http://kharkivfrontend.org/img/ava.jpg"><link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="frontend meetup">
+    <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="frontend meetup">
+    <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-320x460.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-750x1294.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1182x2208.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1242x2148.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-748x1024.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-768x1004.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1496x2048.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
+</head>
+<body>
+<!--.preloader
+// - for (var item = 1; item <= 5; item++)
+// 	.preloader_item
+// 		- for (var dot = 1; dot <= 16; dot++)
+// 			.preloader_item-dot
+-->
+<header>
+    <div class="header_inner_wrap">
+        <div class="header_inner"><a class="logo" href="/"><img class="logo-img" alt="logo" src="img/logo-small.png"/></a>
+            <button class="toggle-menu-button"></button>
+            <nav class="header_menu" id="header_menu">
+                <ul class="header_menu-list">
+                    <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#speakers">Кто будет</a></li>
+                    <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#agenda">Что обсудим</a></li>
+                    <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#partners">Кто помогает</a></li>
+                    <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#map">Где</a></li>
+                    <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#archive">Как было</a></li>
+                    <li class="header_menu-list_item"><a class="scroll_spy_link menu-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdCik6bsPJxl8x9iXEziYe5WV10Xcu4zhB2-EemMaIqh8ghdw/viewform?entry.587771170=+HTML,+CSS,+JavaScript">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="intro scroll-spy" id="intro"><img class="intro-logo intro-logo__small wow fadeInUp" alt="Kharkiv front-eng logo" src="img/logo.png"/>
+    <h1 class="wow fadeInUp intro-event_name" data-wow-delay=".2s">KharkivFrontend Birthday Meetup</h1>
+    <p class="intro-desc">
+        KharkivFrontend приглашает всех, на свой День рождения! 🌠🎇🎉🎁🥂🍻🍹🍸🍰🍬🍭
+        Отметим этот день интересными лайт-докладами, коктейлями, вкусняшками и разными интерактивчиками.
+    </p>
+    <p class="intro-desc">Подробная информация ниже.</p>
+    <div class="intro-info wow fadeInUp">
+        <p class="intro-time" data-wow-delay=".3s"><img class="intro-time-icon" alt="time" src="img/clock-ico.png"/><span>08.12.18<br>14:30</span>
+        </p><a class="scroll-link intro-location" href="#map" data-wow-delay=".3s"><img class="intro-location-icon" alt="location" src="img/map-mark.svg"/>
+        <address class="intro-location-data">Heisenberg Pub, <br> проспект Науки 50</address></a>
+    </div>
+</section>
+<section class="speakers scroll-spy" id="speakers">
+    <h1 class="section_header wow fadeInUp">докладчики</h1>
+    <div class="speakers-list">
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+            <div class="speakers-person-image-wrap">
+                <div class="speakers-person-image" style="background-image: url('/img/strelnykov.jpg');"></div>
+            </div>
+            <h2 class="speakers-person-name">Алексей Стрельников</h2>
+            <p class="speakers-person-info"></p>
+            <h2 class="speakers-talk-name">Вариантивные шрифты</h2>
+            <p class="speakers-talk-info">Проведем экскурс в вариативные шрифты (вариативные шрифты, чем они отличаются от обычных и в чем их преимущество, при помощи специальных ресурсов и без них попробуем на практике что можно сделать с вариативными шрифтами).
+            </p>
+        </div>
+        <div class="speakers-person wow fadeInUp" data-wow-duration="1s">
+            <div class="speakers-person-image-wrap">
+                <div class="speakers-person-image" style="background-image: url('/img/korabelski.jpg');"></div>
+            </div>
+            <h2 class="speakers-person-name">Максим Корабельский</h2>
+            <p class="speakers-person-info">🤓‍💻JS разработчик с амбициями программиста.. 3 года во фронтенде. Не признает Vue🧐. Любит холивары</p>
+            <h2 class="speakers-talk-name">Web Components</h2>
+            <p class="speakers-talk-info">как создать, поддержка браузерами, перспективы, использование в связке с фреймворками и библиотеками</p>
+        </div>
+    </div>
+</section>
+<section class="agenda scroll-spy" id="agenda">
+    <h1 class="section_header wow fadeInUp">расписание</h1>
+    <table class="agenda-table wow fadeInUp">
+        <thead class="agenda-table-head">
+        <tr>
+            <th>Время</th>
+            <th>Докладчик</th>
+            <th>Название доклада</th>
+        </tr>
+        </thead>
+        <tbody class="agenda-table-body">
+        <tr>
+            <td class="agenda-table-time">14:30</td>
+            <td class="agenda-table-speaker">Встречаемся-рассаживаемся</td>
+            <td class="agenda-table-talk"></td>
+        </tr>
+        <tr>
+            <td class="agenda-table-time">15:00</td>
+            <td class="agenda-table-speaker">Алексей Стрельников</td>
+            <td class="agenda-table-talk">ВАРИАНТИВНЫЕ ШРИФТЫ</td>
+        </tr>
+        <tr>
+            <td class="agenda-table-time">16:00</td>
+            <td class="agenda-table-speaker">Максим Корабельский</td>
+            <td class="agenda-table-talk">WEB COMPONENTS</td>
+        </tr>
+        <tr>
+            <td class="agenda-table-time">17:00</td>
+            <td class="agenda-table-speaker">Общение </td>
+            <td class="agenda-table-talk">Советы, холивары, нетворкинг</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+<!--<section class="sponsors scroll-spy" id="partners">-->
+<!--<h1 class="section_header wow fadeInUp">партнеры</h1>-->
+<!--<div class="sponsors-list">-->
+<!--<div class="sponsor wow fadeInUp">-->
+<!--<div class="sponsor-image-wrap"><a href=" https://codeit.us/ "><img class="sponsor-image" src="/img/codeIt.svg" style="max-width: 200px;"></a>-->
+<!--<h4 class="sponsor-title">CodeIT</h4>-->
+<!--<p class="sponsor-info">-->
+<!--Компания CodeIT с 2007 года занимается разработкой программного обеспечения и фокусирует свою деятельность на реализации проектов полного цикла разработки.-->
+<!--CodeIT работает как со стартапами из стран Европы (Швеция, Германия, Норвегия), так и с крупными компаниями из разных уголков США, предоставляя индивидуальную разработку веб и мобильных решений для различных индустрий и бизнесов.-->
+<!--Постоянный рост, развитие и клиенто-ориентированность команды позволяют компании достигать новых высот.-->
+<!--</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="sponsor wow fadeInUp">-->
+<!--<div class="sponsor-image-wrap"><a href=" https://distributedlab.com/ "><img class="sponsor-image sponsor-image_small" src="/img/DL-logo.png" style="min-width: 230px;"></a>-->
+<!--<h4 class="sponsor-title">Distributed Lab</h4>-->
+<!--<div class="sponsor-info">-->
+<!--<p>Компания Distributed Lab является Центром разработки блокчейн-решений для финансового рынка, занимается созданием  корпоративных решений для токенизации активов, развивает идею “Финансового Интернета”, много внимания уделяет повышению финансовой грамотности в Украине.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="sponsor wow fadeInUp">-->
+<!--<div class="sponsor-image-wrap"><a href=" https://www.instagram.com/kulibin.studio/ "><img class="sponsor-image sponsor-image_small" src="/img/KulibinStudio@4x.png" style="min-width: 230px;"></a>-->
+<!--<h4 class="sponsor-title"></h4>-->
+<!--<div class="sponsor-info">KULIBIN studio - это мастерская Непростых подарков и сувенирки. Непростых, потому что всё делается с душой и в добротном дизайне. И это не преувеличение, зацените <a href="https://www.instagram.com/kulibin.studio/">сами</a></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="sponsor wow fadeInUp">-->
+<!--<div class="sponsor-image-wrap"><a href=" https://www.altexsoft.com/ "><img class="sponsor-image sponsor-image_small" src="/img/altexsoft.png" style="min-width: 230px;"></a>-->
+<!--<h4 class="sponsor-title">AltexSoft</h4>-->
+<!--<div class="sponsor-info">-->
+<!--<p>AltexSoft — компания, работающая в сфере технологического консалтинга и специализирующаяся на создании комплексных программных продуктов. Благодаря высокой технологической, процессной и доменной экспертизе в области TravelTech, AltexSoft помогает своим клиентам создавать и развивать сложные высоконагруженные проекты, таким образом, улучшая их бизнес.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="sponsor wow fadeInUp">-->
+<!--<div class="sponsor-image-wrap"><a href=" https://macuser.ua/ "><img class="sponsor-image sponsor-image_small" src="img/macuser.png" style="min-width: 230px;"></a>-->
+<!--<h4 class="sponsor-title">MACUSER</h4>-->
+<!--<div class="sponsor-info">-->
+<!--<p>100% качественных товаров и услуг точно вовремя.</p>-->
+<!--<p>От первых шагов до крупномасштабных проектов.</p>-->
+<!--<p>Продажа, обучение, ремонт, техническая поддержка, текущее обслуживание устройств.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="sponsor wow fadeInUp">-->
+<!--<div class="sponsor-image-wrap"><a href=" https://www.facebook.com/valtech.ukraine/ "><img class="sponsor-image sponsor-image_small" src="img/valtech.png" style="min-width: 230px;"></a>-->
+<!--<h4 class="sponsor-title">Valtech</h4>-->
+<!--<div class="sponsor-info">-->
+<!--<p>We are Valtech – a global digital agency (2500+ consultants, 5 continents, 16 countries, 40 offices). We design and build, we run and optimize digital operations continuously. We are consultants and we work for the coolest brands on the planet.</p>-->
+<!--<p>Large global players as well as national champions. In Ukraine our teams are mostly focused on technical delivery of enterprise level projects for Retail, Finance, FMCG and Hospitality verticals.</p>-->
+<!--<p>We closely work with our European and other global colleagues to accelerate digital transformations for our clients.</p>-->
+<!--<p>We are 200+ consultants and we deliver experiences from Kyiv, Kharkiv, Dnipro, Chernihiv and Chernivtsi.</p>-->
+<!--<p>Join our team!</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!--<section class="speakers scroll-spy" id="speakers">-->
+<!--<h1 class="section_header wow fadeInUp">Наши друзья</h1>-->
+<!--<div class="friends-list">-->
+<!--<div class="friends-community wow fadeInUp" data-wow-duration="1s">-->
+<!--<div class="friends-image-wrap"><a class="friends-image" href="'https://ngtalks.io/'" target="_blanc" style="background-image: url('https://uploads-ssl.webflow.com/5846efd7f1ff15e45b312d19/58a5dcffbf8b84e11bb12818_ng-talks-logo.png');"></a></div>-->
+<!--<div class="friend-info">-->
+<!--<h2 class="speakers-person-name friend-name">Конференция NgTalks 2018</h2>-->
+<!--<p class="speakers-person-info friend-desc">Пройдет 8-11 августа в Fabrika.space, г. Харьков. NgTalks  — первая в Украине конференция, посвященная Angular технологиям и охватывающая передовые методы, подходы и самые современные тенденции сообщества. Мероприятие продлится 4 дня, из которых 2 полноценных дня, 8-9 августа, будут состоять из Workshop-ов, а 10-11 августа пройдет конференция.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="friends-community wow fadeInUp" data-wow-duration="1s">-->
+<!--<div class="friends-image-wrap"><a class="friends-image" href="'http://odessajs.org/'" target="_blanc" style="background-image: url('/img/odessa-js.png');"></a></div>-->
+<!--<div class="friend-info">-->
+<!--<h2 class="speakers-person-name friend-name">OdessaJS 2018</h2>-->
+<!--<p class="speakers-person-info friend-desc">OdessaJS’2018☀️ одна из самых больших JavaScript конференций возле Черного моря. В этом году мы встретимся уже в 6й раз чтобы: встретиться с спикерами из Microsoft, Mozilla, Product Hunt, Auth0 и другими (всего более 50ти докладчиков)! обсудить интересующие вопросы об автоматизации, highload проектах, data science и многом другом проапгрейдить свои навыки на воркшопах по фреймворкам, блокчейну и карьерному бусту познакомиться с новыми и встретится со старыми друзьями насладиться морем, солнцем, вечеринками и незабываемой атмосферой Одессы🏖</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="friends-community wow fadeInUp" data-wow-duration="1s">-->
+<!--<div class="friends-image-wrap"><a class="friends-image" href="'https://syndicode.com/'" target="_blanc" style="background-image: url('/img/syndicode.png');"></a></div>-->
+<!--<div class="friend-info">-->
+<!--<h2 class="speakers-person-name friend-name">Syndicode</h2>-->
+<!--<p class="speakers-person-info friend-desc">Syndicode является быстро растущим игроком в бизнесе по разработке программного обеспечения и все же уже успел завоевал высокую степень уверенности со стороны клиентов и партнеров. Syndicode сочетает качество, производительность и гибкость в доверительных партнерских отношениях в Украине, Европе и США. Как экстраординарные профессионалы, они работают вместе, чтобы сделать самые большие веб-и мобильные приложения для всех бизнес-целей.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="friends-list space-between">-->
+<!--<a href="https://itvdn.com/">-->
+<!--<img src="/img/ITVDN.png" width="200" alt="инфо партнер itvdn">-->
+<!--</a>-->
+<!--<a href="https://sourceit.com.ua/">-->
+<!--<img src="https://sourceit.com.ua/images/logo.svg" alt="инфо партнер sourceit">-->
+<!--</a>-->
+<!--<a href="https://edu.cbsystematics.com/ru/">-->
+<!--<img src="https://edu.cbsystematics.com/Content/LogoCBS.png" width="180" alt="инфо партнер cbsystematics">-->
+<!--</a>-->
+<!--<a href="https://www.daxx.com/">-->
+<!--<img src="/img/daxx-logo.png" width="200" alt="инфо партнер daxx">-->
+<!--</a>-->
+<!--<a href="http://www.ridehostel.com.ua/">-->
+<!--<img src="/img/ride.png" width="200" alt="инфо партнер ride">-->
+<!--</a>-->
+<!--</div>-->
+<!--</section>-->
+<section class="archive scroll-spy" id="archive">
+    <h1 class="section_header wow fadeInUp">архив</h1>
+    <div class="archive-list">
+        <div class="archive-item">
+            <div class="archive-item__img"><a href="meetup-1.html"><img src="/img/meetup-0/afisha.jpg"></a></div>
+            <h2 class="archive-item__title"><a class="archive-item__link" href="meetup-1.html">KharkivFrontend Meetup #0</a></h2>
+        </div>
+        <div class="archive-item">
+            <div class="archive-item__img"><a href="meetup-2.html"><img src="/img/meetup-2/afisha.png"></a></div>
+            <h2 class="archive-item__title"><a class="archive-item__link" href="meetup-2.html">KharkivFrontend Meetup #2</a></h2>
+        </div>
+    </div>
+</section>
+<section class="map scroll-spy" id="map">
+    <h1 class="section_header wow fadeInUp">расположение</h1>
+    <div class="wow fadeInUp" id="map-container"></div>
+</section>
+<footer class="footer">
+    <h1 class="section_header wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+        Контактная
+        информация
+    </h1>
+    <div class="contacts">
+        <p>Свяжитесь с нами:</p><a href="tel:+380668183442">+38 066 818 34 42</a><a href="mailto:kharkivfrontend@gmail.com"> kharkivfrontend@gmail.com</a>
+    </div>
+    <div class="social-list"><a class="social-link email" href="mailto:kharkivfrontend@gmail.com"><span class="visually-hidden">наш email</span></a><a class="social-link fb" href="https://www.facebook.com/KharkivFrontend/"><span class="visually-hidden">наша страничка на facebook</span></a><a class="social-link instagram" href="https://www.instagram.com/kharkivfrontend/"><span class="visually-hidden">наша страничка в instagram</span></a></div>
+</footer>
+<!-- bower:js-->
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/vendor/wow.js"></script>
+<!-- endbower-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvo_hmAD5Pjm9yJmG6_vQwUTD03Zfhlqk"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+.speakers
+	padding: 50px 0
+	&-list
+		+min-screen($mobile - 1)
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			flex-direction: row
+		&-item
+			+min-screen($mobile - 1)
+			flex-direction: column
+	&-person
+		// flex: 1 0 0
+		margin-bottom: 50px
+		padding: 0 30px
+		+min-screen($tablet - 1)
+			flex: 1 0 45%
+			max-width: 45%
+		+min-screen($mdpi)
+			margin-bottom: 100px
+			margin-bottom: 100px
+			flex: 1 0 26%
+			max-width: 30%
+		&-item
+			width: 100%
+			max-width: 100%
+			flex-direction: column
+			display: flex
+			margin-bottom: 30px
+			+min-screen($tablet - 1)
+				flex-direction: row
+				width: 75%
+				max-width: 100%
+				margin: 0 auto 40px
+		&-talk
+		&-wrap
+			+min-screen($tablet - 1)
+				margin-right: 25px
+			.speakers-person-image-wrap
+				margin-bottom: 10px
+		&-image
+			display: inline-block
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: cover
+			vertical-align: middle
+			height: 180px
+			width: 180px
+			+min-screen($mobile - 1)
+				height: 200px
+				width: 200px
+			&-wrap
+				margin-bottom: 30px
+				text-align: center
+				position: relative
+				white-space: nowrap
+				&:before,
+				&:after
+					@extend %icon
+					vertical-align: middle
+					font-size: 80px
+					line-height: 1
+					+min-screen($mobile - 1)
+						font-size: 120px
+					+min-screen($mdpi)
+						font-size: 150px
+						line-height: 1
+					// height: 200px
+				&:before
+					content: $icon-bracket-l
+					padding-right: 20px
+				&:after
+					content: $icon-bracket-r
+					padding-left: 20px
+		&-name
+			text-align: center
+			margin-bottom: 15px
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+			font-size: $text-header-size 
+		&-info
+			font-size: 18px
+			font-weight: 700
+			margin-bottom: 25px
+			color: $primary-blue
+			+min-screen($tablet - 1)
+				margin-bottom: 25px
+				height: 4.2em
+				overflow: hidden
+				cursor: pointer
+				transition: height 1s ease
+				&:hover
+					min-height: 4.2em
+					height: auto
+					overflow: auto
+	&-talk
+		&-name
+			color: $primary-red
+			// position: relative
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+			display: flex
+			align-items: center
+			margin-bottom: 25px
+			line-height: 1.25
+			// font-size: $text-header-size
+			text-transform: uppercase
+			font-size: $text-header-size/1.5
+			+min-screen($mobile - 1)
+				font-size: 26px
+			&:before
+				@extend %icon
+				content: $icon-bracket-l
+				font-size: 60px
+				margin-right: 10px
+				color: $primary-light-red
+				+min-screen($mobile - 1)
+					font-size: 111px
+			&_without-dec
+				&:before
+					content: none
+		&-info
+			font-size: 20px
+			&:before
+				content: "{"
+			&:after
+				content: "}"
+		&-link
+			font-size: 1.3em
+			color: $primary-blue
+	&-talk-item
+		&-info
+			margin-bottom: .5em
+//photo
+.photo
+	flex-grow: 1
+	padding: 0 10px
+	margin-bottom: 20px
+	max-height: 650px
+	&-list
+		display: flex
+		flex-wrap: wrap
+		width: 80%
+		margin: 0 auto 20px
+	+min-screen($tablet - 1)
+		max-height: 450px
+		&-25
+			width: 25%
+		&-30
+			width: 30%
+		&-40
+			width: 40%
+		&-50
+			width: 50%
+		&-60
+			width: 60%
+		&-75
+			width: 75%
+		&-100
+			width: 100%
+	+min-screen(1600px)
+		max-height: 650px
+	img
+		object-fit: cover
+		object-position: left
+		width: 100%
+		height: 300px
+		+min-screen($tablet - 1)
+		height: 100%
+

@@ -1,0 +1,68 @@
+.toggle-menu-button
+	+pseudo
+	display: none
+	margin-top: 15px
+	width: 46px
+	height: 30px
+	cursor: pointer
+	background-color: transparent
+	border-top: 3px solid $primary-blue
+	transition: all .3s ease
+	+max-screen($tablet)
+		display: inline-block
+	&:before,
+	&:after
+		border-top: 3px solid $primary-blue
+		transition: all .3s ease
+	&:before
+		width: 25px
+		top: 13px
+		transform-origin: right top
+	&:after
+		width: 38px
+		top: 27px
+		transform-origin: left top
+	.is-menu-show &
+		// border-top-color: $primary-red
+		// border-top-width: 2px
+		&:before,
+		&:after
+			// border-top-color: $primary-red
+			width: 50%
+			top: 0
+			// border-top-width: 2px
+		&:before
+			transform: rotate(-45deg)
+		&:after
+			transform: rotate(45deg)
+			left: auto
+			right: 0
+
+.button
+	display: inline-block
+	position: relative
+	letter-spacing: 0
+	font-size: 20px
+	color: $white
+	border-radius: 5px
+	background-color: $primary-red
+	padding: 0 60px
+	line-height: 50px
+	height: 50px
+	text-decoration: none
+	text-transform: uppercase
+	transition: box-shadow .45s cubic-bezier(0.25,1,0.33,1), background-color .45s cubic-bezier(0.25,1,0.33,1)
+	&:hover
+		background-color: $primary-blue
+		box-shadow: 0 0 15px 5px $primary-blue
+	&_center
+		display: block
+		margin: 0 auto
+		min-width: 192px
+		max-width: 300px
+		text-align: center
+
+.menu-button
+	@extend .button
+	margin: 0 20px
+	padding: 0 30px

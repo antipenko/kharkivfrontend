@@ -1,0 +1,25 @@
+extends ./layout/default_layout
+
+block title_name
+    title=title
+
+
+block main_content
+    include ../elements/preloader/index
+
+    include ../elements/menu/index
+
+    form#form(target='_self', onsubmit='', action='' style="padding-top: 200px;")
+        fieldset
+            label Question 1
+            input#qs1_op_1.ids(type='text', value='', name='qs1' placeholder='name')
+            input#qs1_op_2.ids(type='email', value='', name='qs1' placeholder='email')
+        fieldset
+            label Your expirience
+            input#qs2_op_1(type='radio', value='<1', name='qs2')
+            input#qs2_op_2(type='radio', value='>1', name='qs2')
+        div(style='width: 100%; display: block; float: right;')
+            button#send(type='submit')
+                | Send
+
+    //iframe.form-registrate(src="https://docs.google.com/forms/d/e/1FAIpQLSfuZZjgEey4O0RVaCziCWzRDfsJuIMscnORwQuPcmuUoFAeQg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0")
