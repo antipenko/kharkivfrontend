@@ -11,6 +11,14 @@ var webp = require('gulp-webp');
 var babel = require("gulp-babel");
 var browserSync = require('browser-sync').create();
 
+// variable for path to files
+const path = {
+    js: {
+        wow: './node_modules/wowjs/dist/wow.min.js'
+    }
+}
+
+
 function sync(cb) {
     browserSync.init({
         server: {
@@ -112,8 +120,17 @@ function watchFiles(cb) {
     cb();
 }
 
+function copyScripts(cb){
+    
+    gulp.src(path.js.wow)
+        .pipe(gulp.dest('build/js'));
+
+    cb();
+}
+
 
 function build(cb) {
+    copyScripts(cb)
     buildHtml(cb);
     buildJs(cb);
     compileStyle(cb);
