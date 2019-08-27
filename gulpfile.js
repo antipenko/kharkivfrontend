@@ -42,7 +42,7 @@ function compileStyle(cb) {
         }))
         .on('error', notify.onError(
             {
-                message: "<%= error.message %>",
+                message: "<%= error.message %> 😱",
                 title: "Sass Error!"
             }
         ))
@@ -55,7 +55,7 @@ function compileStyle(cb) {
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./build/css'))
-        .pipe(notify({ message: 'Styles task complete', sound: false, onLast: true }))
+        .pipe(notify({ message: 'Styles task complete 😉', sound: false, onLast: true }))
         .pipe(browserSync.stream());
 
     cb();
