@@ -11,6 +11,10 @@ var webp = require('gulp-webp');
 var babel = require("gulp-babel");
 var browserSync = require('browser-sync').create();
 var pug = require('gulp-pug');
+var swig = require('gulp-swig');
+var pathTest = require('path');
+var data = require('gulp-data');
+var fs = require('fs');
 
 // variable for path to files
 const path = {
@@ -72,7 +76,13 @@ gulp.task('compileStyle', compileStyle);
 // }
 
 function buildHtml(cb) {
-    gulp.src('app/**/*.pug')
+    gulp.src('app/*.pug')
+    .pipe(data(function (file) {
+		// const json = './app/helpers/' + pathTest.basename(file.path) + '.json';
+		// delete require.cache[require.resolve(json)];
+        // return require(json);
+        return JSON.parse(fs.readFileSync('./app/helpers/' + pathTest.basename(file.path) + '.json'))
+	}))
     .pipe(pug({
         pretty: true
     }))
@@ -82,6 +92,16 @@ function buildHtml(cb) {
 }
 
 gulp.task('buildHtml', buildHtml);
+
+// function jsonTest(cb) {
+//     gulp.src('./app/helpers/test1.html')
+//       .pipe(data(function(file) {
+//         return JSON.parse(fs.readFileSync('./app/helpers/' + path.basename(file.path) + '.json'));
+//       }))
+//       .pipe(swig())
+//       .pipe(gulp.dest('build'));
+//       cb();
+//   };
 
 function buildJs(cb) {
 
