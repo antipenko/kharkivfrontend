@@ -12,12 +12,12 @@ var babel = require("gulp-babel");
 var browserSync = require('browser-sync').create();
 var pug = require('gulp-pug');
 var swig = require('gulp-swig');
-var pathTest = require('path');
+var path = require('path');
 var data = require('gulp-data');
 var fs = require('fs');
 
 // variable for path to files
-const path = {
+const paths = {
     js: {
         wow: './node_modules/wowjs/dist/wow.min.js'
     }
@@ -67,24 +67,15 @@ function compileStyle(cb) {
 }
 gulp.task('compileStyle', compileStyle);
 
-// function buildHtml(cb) {
-//     console.log('html');
-//     gulp.src('app/**/*.html')
-//         .pipe(gulp.dest('build/'))
-//         .pipe(browserSync.reload({ stream: true }));
-//     cb();
-// }
-
 function buildHtml(cb) {
+    let pugJson = JSON.parse( fs.readFileSync('./app/helpers/data/main.json', { encoding: 'utf8' }));
     gulp.src('app/*.pug')
     .pipe(data(function (file) {
-		// const json = './app/helpers/' + pathTest.basename(file.path) + '.json';
-		// delete require.cache[require.resolve(json)];
-        // return require(json);
-        return JSON.parse(fs.readFileSync('./app/helpers/' + pathTest.basename(file.path) + '.json'))
+        return JSON.parse(fs.readFileSync('./app/helpers/data/' + path.basename(file.path) + '.json'))
 	}))
     .pipe(pug({
-        pretty: true
+        pretty: true,
+        locals: pugJson
     }))
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.reload({ stream: true }));
@@ -93,15 +84,6 @@ function buildHtml(cb) {
 
 gulp.task('buildHtml', buildHtml);
 
-// function jsonTest(cb) {
-//     gulp.src('./app/helpers/test1.html')
-//       .pipe(data(function(file) {
-//         return JSON.parse(fs.readFileSync('./app/helpers/' + path.basename(file.path) + '.json'));
-//       }))
-//       .pipe(swig())
-//       .pipe(gulp.dest('build'));
-//       cb();
-//   };
 
 function buildJs(cb) {
 
@@ -155,7 +137,7 @@ function watchFiles(cb) {
 
 function copyScripts(cb){
     
-    gulp.src(path.js.wow)
+    gulp.src(paths.js.wow)
         .pipe(gulp.dest('build/js'));
 
     cb();
