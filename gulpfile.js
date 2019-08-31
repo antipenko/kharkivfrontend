@@ -10,6 +10,7 @@ var pngquant = require('imagemin-pngquant');
 var webp = require('gulp-webp');
 var babel = require("gulp-babel");
 var browserSync = require('browser-sync').create();
+var pug = require('gulp-pug');
 
 // variable for path to files
 const path = {
@@ -62,13 +63,25 @@ function compileStyle(cb) {
 }
 gulp.task('compileStyle', compileStyle);
 
+// function buildHtml(cb) {
+//     console.log('html');
+//     gulp.src('app/**/*.html')
+//         .pipe(gulp.dest('build/'))
+//         .pipe(browserSync.reload({ stream: true }));
+//     cb();
+// }
+
 function buildHtml(cb) {
-    console.log('html');
-    gulp.src('app/**/*.html')
-        .pipe(gulp.dest('build/'))
-        .pipe(browserSync.reload({ stream: true }));
+    gulp.src('app/**/*.pug')
+    .pipe(pug({
+        pretty: true
+    }))
+    .pipe(gulp.dest('build/'))
+    .pipe(browserSync.reload({ stream: true }));
     cb();
 }
+
+gulp.task('buildHtml', buildHtml);
 
 function buildJs(cb) {
 
@@ -114,7 +127,7 @@ gulp.task('imageBuild', imageBuild);
 
 function watchFiles(cb) {
     gulp.watch('./**/*.scss', compileStyle);
-    gulp.watch('app/**/*.html', buildHtml);
+    gulp.watch('app/**/*.pug', buildHtml);
     gulp.watch('app/**/*.js', buildJs);
 
     cb();
