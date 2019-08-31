@@ -18,6 +18,16 @@ var fs = require('fs');
 
 // variable for path to files
 const paths = {
+    src:{
+        scss: './app/scss/app.scss',
+        js: './app/js/app.js',
+        img: './app/images/**/*.*',
+    },
+    dist:{
+        css: './build/css',
+        js: './build/js',
+        img: './build/images',
+    },
     js: {
         wow: './node_modules/wowjs/dist/wow.min.js'
     }
@@ -39,7 +49,7 @@ gulp.task('sync', sync);
 
 function compileStyle(cb) {
 
-    gulp.src('./app/scss/app.scss')
+    gulp.src(paths.src.scss)
         .pipe(sourcemaps.init())
         .pipe(scss({
             outputStyle: 'compressed',
@@ -59,7 +69,7 @@ function compileStyle(cb) {
             suffix: '.min'
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./build/css'))
+        .pipe(gulp.dest(paths.dist.css))
         .pipe(notify({ message: 'Styles task complete 😉', sound: false, onLast: true }))
         .pipe(browserSync.stream());
 
@@ -88,17 +98,17 @@ gulp.task('buildHtml', buildHtml);
 function buildJs(cb) {
 
 
-    gulp.src("app/js/app.js")
+    gulp.src(paths.src.js)
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(gulp.dest("build/js"))
+        .pipe(gulp.dest(paths.dist.js))
         .pipe(browserSync.reload({ stream: true }));
 
         gulp.src(['app/js/*.js', '!app/js/app.js'])
         .pipe(sourcemaps.init())
-        .pipe(gulp.dest("build/js"))
+        .pipe(gulp.dest(paths.dist.js))
         .pipe(browserSync.reload({ stream: true }));
 
     cb();
@@ -107,18 +117,18 @@ function buildJs(cb) {
 gulp.task('buildJs', buildJs);
 
 function imageBuild(cb) {
-    gulp.src('app/images/**/*.*')
+    gulp.src(paths.src.img)
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest('build/images'));
+        .pipe(gulp.dest(paths.dist.img));
 
-        gulp.src('app/images/**.*')
+        gulp.src('app/images/**/**.*')
         .pipe(webp())
-        .pipe(gulp.dest('build/images'))
+        .pipe(gulp.dest(paths.dist.img))
         .pipe(browserSync.reload({ stream: true }));
 
     cb();
@@ -138,7 +148,7 @@ function watchFiles(cb) {
 function copyScripts(cb){
     
     gulp.src(paths.js.wow)
-        .pipe(gulp.dest('build/js'));
+        .pipe(gulp.dest(paths.dist.js));
 
     cb();
 }
