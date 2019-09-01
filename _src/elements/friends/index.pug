@@ -1,0 +1,11 @@
+section#speakers.speakers.scroll-spy
+    h1.section_header.wow.fadeInUp Наши друзья
+
+    .friends-list
+        each friend in friends
+            .friends-community.wow.fadeInUp(data-wow-duration="1s")
+                .friends-image-wrap
+                    a.friends-image(href="https://ngtalks.io/" target="_blanc" style="background-image: url('" + friend.image + "');")
+                .friend-info
+                    h2.speakers-person-name.friend-name=friend.name
+                    p.speakers-person-info.friend-desc=friend.desc

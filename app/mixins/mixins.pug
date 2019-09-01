@@ -1,0 +1,13 @@
+mixin insert-image(name, alt, className)
+	-alt = alt || 'image'
+	-nameSplit= name.split('.')
+	-nameArray = nameSplit.splice(nameSplit.length-1, 1, 'webp')
+	-webp= nameSplit.join('.')
+
+	picture
+		source(srcset="/images/" + webp  type='image/webp')
+		source(srcset="/images/" + name type='image/png')
+		img(src="/images/" + name alt=alt)
+
+
+	//- img(alt=alt src="images/" + name class=className || '')

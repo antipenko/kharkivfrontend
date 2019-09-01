@@ -15,4 +15,4 @@ class User {
   }
   
   let user = new User("Вася");
-  user.sayHi(); // Вася
+  

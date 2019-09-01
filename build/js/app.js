@@ -32,4 +32,3 @@ function () {
 }();
 
 var user = new User("Вася");
-user.sayHi(); // Вася

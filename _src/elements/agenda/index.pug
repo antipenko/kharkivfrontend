@@ -1,0 +1,43 @@
+section#agenda.agenda.scroll-spy
+
+	h1.section_header.wow.fadeInUp расписание
+	p.text-center Расписание ещё формируется. Уже скоро появится.
+	//table.agenda-table.wow.fadeInUp
+	//	thead.agenda-table-head
+	//		tr
+	//			th Время
+	//			th Докладчик
+	//			th Название доклада
+	//	tbody.agenda-table-body
+	//		each speaker in speakers
+	//			tr
+	//				td.agenda-table-time=speaker.talk.time
+	//				td.agenda-table-speaker=speaker.person.name
+	//				td.agenda-table-talk=speaker.talk.name
+section#tickets.agenda.scroll-spy
+	h1.section_header Билеты
+	table.agenda-table.wow.fadeInUp
+			thead.agenda-table-head
+				tr
+					th Тип Билета
+					th Завершение продажи
+					th Цена
+			tbody.agenda-table-body
+				tr
+					td Ранние пташки
+					td 25.06.2018
+					td 200 грн
+				tr
+					td Стандарт
+					td 20.07.2018
+					td 300 грн
+	.ticket-wrapper
+		a.menu-button.ticket-button(href=menu_button[1], target="_blank") Купить билет
+	.payment-info.text-center
+		p
+			|ОБРАТИТЕ ВНИМАНИЕ, что для покупки билета, важно заполнить
+			a(href="https://docs.google.com/forms/d/e/1FAIpQLSdzjph4Ld8Q9oEzec6xWDZ9smbDFr0zMgPd8lUfEvAdRNoh-w/viewform") форму
+			| и произвести оплату.
+		p Если вы заполнили форму, но не произвели оплату, то воспользуьтесь кнопкой ниже :)
+		p
+			a.menu-button.ticket-button(href="https://www.liqpay.ua/ru/checkout/card/1528901770270771_43003750_82CoXhki2wi7YLSvXEwz", target="_blank") Оплата

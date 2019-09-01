@@ -1,0 +1,99 @@
+extends ./layout/default_layout
+
+block title_name
+    title=title
+
+
+block main_content
+    include ../elements/preloader/index
+
+    include ../elements/menu/menu-meetup
+
+    section#intro.intro.intro-item.scroll-spy
+        img.intro-logo.intro-logo-item.wow.fadeInUp(alt='Kharkiv front-eng logo', src='img/logo.png')
+        h1.wow.fadeInUp.intro-event_name.intro-event-item_name(data-wow-delay='.2s') #_2
+        .intro-info.intro-info_big.wow.fadeInUp
+            p 1 апреля прошел KharkivFrontend Meetup #_3.
+            p Митап получился достаточно обширным, мы переписывали бутстраповскую сетку на гриды и убедились, на сколько же это проще.
+            p Узнали как обезопасить себя от XSS, Максим показал все достоинства функционального подхода.
+            p Почти нашли инвесторов для съемок фильма "Молчание тестов" и под конец разобрались с тем, как же изнутри работает React Native.
+    section#speakers.speakers.scroll-spy
+        h1.section_header.wow.fadeInUp speakers
+        .speakers-list.speakers-list-item
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/strelnykov.jpg')")
+                    h2.speakers-person-name Стрельников Алексей
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec Расставим сети. CSS Grid Layout module.
+                    p.speakers-talk-item-info
+                        | Что такое, для чего CSS Grid Layout module? Основные свойства грид-контейнера. Фичи и нововведения. Практическое применение.
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=MiCzHtgQIqs&list=PLDddScyTGZAvMNlREfTpW2MYnmC2aj1uf" target="_blank") Ссылка на видео
+
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/korabelski.jpg');")
+                    h2.speakers-person-name Максим Корабельский
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec Functional Programming in JS
+                    p.speakers-talk-item-info
+                        | Обзор парадигмы. Основные принципы, термины и развенчивание мифов.
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=ZyUHzLylcGA&index=3&list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP" target="_blank") Ссылка на видео
+
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/bohdan.jpg')")
+                    h2.speakers-person-name Богдан Резанов
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec Не доверяй входящим данным. Или что такое XSS
+                    p.speakers-talk-item-info Что такое XSS. С чем её едят. Куда прикладывать подорожник.
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=ArItIDpVL58&index=4&list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP" target="_blank") Ссылка на видео
+
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/chub.jpg')")
+                    h2.speakers-person-name Чуб Вячеслав
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec О чем молчат тесты?
+                    p.speakers-talk-item-info
+                        | Нестандартный подход к написанию тестов
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=0BwpXOTj_P0&list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP&index=5" target="_blank") Ссылка на видео
+            .speakers-person.speakers-person-item.wow.fadeInUp(data-wow-duration='1s')
+                .speakers-person-wrap
+                    .speakers-person-image-wrap
+                        .speakers-person-image(style="background-image: url('/img/kulyk.jpg')")
+                    h2.speakers-person-name Антон Кулик
+                .speakers-person-talk
+                    h2.speakers-talk-name.speakers-talk-name_without-dec Под капотом React Native
+                    p.speakers-talk-item-info
+                        | Обзор архитектуры, коммуникация нативной и JS частей. Преимущества и недостатки в сравнении с другими мобильными решениями. Как делать нативные компоненты.F
+                    a.speakers-talk-link(href="https://www.youtube.com/watch?v=0BwpXOTj_P0&list=PLDddScyTGZAu1b12lrG2YzSMZJ3g2VyFP&index=5" target="_blank") Ссылка на видео
+
+
+    section#photo.meetup-photos.scroll-spy
+        h1.section_header.wow.fadeInUp Photos
+        .photo-list
+            .photo.photo-60
+                img(src="/img/meetup-2/1.jpg")
+            .photo.photo-40
+                img(src="/img/meetup-2/4.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/6.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/2.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/3.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/5.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/7.jpg")
+            .photo.photo-30
+                img(src="/img/meetup-2/8.jpg")
+        a.button.button_center(href="https://www.facebook.com/508883692837624/photos/?tab=album&album_id=560533167672676" target="_blank") Больше фото
+    include ../elements/archive/index
+    include ../elements/map/index
+    //- include ../elements/ticket/index

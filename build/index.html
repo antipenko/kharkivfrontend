@@ -7,31 +7,30 @@
   <title>ba-flex-starter</title>
 </head>
 <body></body>
-<header class="ba-header">
-  <div class="container ba-header__container"><a class="ba-logo" href="#">Logo</a>
-    <nav>
-      <ul class="menu">
-        <li class="menu__item"><a class="menu__link" href="#speakers">Кто будет</a></li>
-        <li class="menu__item"><a class="menu__link" href="#agenda">Что обсудим</a></li>
-        <li class="menu__item"><a class="menu__link" href="#partners">Кто помогает</a></li>
-        <li class="menu__item"><a class="menu__link" href="#map">Где</a></li>
-        <li class="menu__item"><a class="menu__link" href="#archive">Как было</a></li>
-      </ul>
-    </nav>
+<header>
+  <div class="header_inner_wrap">
+    <div class="header_inner"><a class="logo" href="/">
+        <picture>
+          <source srcset="/images/logo-small.webp" type="image/webp"/>
+          <source srcset="/images/logo-small.png" type="image/png"/><img src="/images/logo-small.png" alt="logo"/>
+        </picture></a>
+      <button class="toggle-menu-button"></button>
+      <nav class="header_menu" id="header_menu">
+        <ul class="header_menu-list">
+          <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#speakers">Кто будет</a></li>
+          <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#agenda">Что обсудим</a></li>
+          <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#partners">Кто помогает</a></li>
+          <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#map">Где</a></li>
+          <li class="header_menu-list_item"><a class="scroll_spy_link scroll-link header_menu-list_item-link " href="#archive">Как было</a></li>
+          <li class="header_menu-list_item"><a class="menu-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdzjph4Ld8Q9oEzec6xWDZ9smbDFr0zMgPd8lUfEvAdRNoh-w/viewform?usp=sf_link" target="_blank">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 <main>
   <section>
-    <div class="container">
-      <!-- ba-slider start-->
-      <div class="ba-slider">
-        <div class="ba-slide"><img src="https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com" alt="text"></div>
-        <div class="ba-slide"><img src="https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com" alt="text"></div>
-        <div class="ba-slide"><img src="https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com" alt="text"></div>
-        <div class="ba-slide"><img src="https://via.placeholder.com/150/0000FF/808080 ?Text=Digital.com" alt="text"></div>
-      </div>
-      <!-- ba-slider end-->
-    </div>
+    <div class="container"></div>
   </section>
   <section class="test">
     <p>some text </p>
